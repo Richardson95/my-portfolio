@@ -63,7 +63,7 @@ function App() {
     {
       company: 'InfraCredit',
       role: 'Frontend Developer',
-      period: 'September 2025 - November 2025',
+      period: 'September 2025 - Present',
       type: 'contract',
       description: [
         'Built enterprise-grade Professional Development Platform using Next.js 15, TypeScript, and Chakra UI, serving 500+ employees',
@@ -368,7 +368,7 @@ function App() {
             </div>
 
             <p className="text-lg text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed animate-fadeIn delay-200">
-              4+ years of experience building scalable apps using React.js, Next.js, Vue.js, React Native, and TypeScript.
+              5+ years of experience building scalable apps using React.js, Next.js, Vue.js, React Native, and TypeScript.
               Passionate about enhancing UX and delivering high-quality digital products.
             </p>
 
@@ -452,7 +452,7 @@ function App() {
                   Professional Summary
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Front-End Web & Mobile Developer with 4+ years of experience building scalable applications using modern technologies like React.js, Next.js, Vue.js, React Native, and TypeScript.
+                  Front-End Web & Mobile Developer with 5+ years of experience building scalable applications using modern technologies like React.js, Next.js, Vue.js, React Native, and TypeScript.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   I've successfully improved page load speeds by 40%, optimized app performance for 5,000+ users, and mentored 50 women from learners to intern developers.
@@ -465,7 +465,7 @@ function App() {
 
             <div className="grid grid-cols-2 gap-6 animate-slideInRight">
               <div className="bg-linear-to-br from-blue-600 to-blue-700 p-6 rounded-2xl text-white text-center hover:scale-110 hover:rotate-3 transition-all duration-300 shine-effect group cursor-pointer">
-                <div className="text-4xl font-bold mb-2 group-hover:scale-125 transition-transform">4+</div>
+                <div className="text-4xl font-bold mb-2 group-hover:scale-125 transition-transform">5+</div>
                 <div className="text-blue-100">Years Experience</div>
               </div>
               <div className="bg-linear-to-br from-purple-600 to-purple-700 p-6 rounded-2xl text-white text-center hover:scale-110 hover:rotate-3 transition-all duration-300 shine-effect group cursor-pointer">
