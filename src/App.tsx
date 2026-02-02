@@ -188,7 +188,7 @@ function App() {
     {
       title: 'Kudi9ja Pro',
       description: 'Advanced financial technology platform dashboard with comprehensive analytics, transaction management, and reporting features.',
-      image: '/Official-kudi9ja-logo.png',
+      image: '/kudi9ja_logo_greywordmark_transparent.png',
       link: 'https://kudi9ja-pro.vercel.app/dashboard',
       tags: ['React.js', 'TypeScript', 'FinTech'],
       type: 'web'
