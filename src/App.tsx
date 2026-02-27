@@ -154,11 +154,11 @@ function App() {
 
   const projects: Project[] = [
     {
-      title: 'Logiccode Academy',
-      description: 'Educational platform built with Vue.js and Tailwind CSS. Improved load times by 40% and enhanced user experience with interactive learning features.',
-      image: '/logic.jpg',
-      link: 'https://logiccode.vercel.app/',
-      tags: ['Vue.js', 'Tailwind CSS', 'Education'],
+      title: 'Kudi9ja Pro',
+      description: 'Advanced financial technology platform dashboard with comprehensive analytics, transaction management, and reporting features.',
+      image: '/kudi9ja_logo_greywordmark_transparent.png',
+      link: 'https://www.kudi9ja.com/',
+      tags: ['React.js', 'TypeScript', 'FinTech'],
       type: 'web'
     },
     {
@@ -168,6 +168,22 @@ function App() {
       link: 'https://lawvee.com/',
       tags: ['Flutter', 'Dart', 'Mobile', 'Education'],
       type: 'mobile'
+    },
+    {
+      title: 'Spiritual Consult',
+      description: 'Nigerian digital platform connecting users with verified spiritual practitioners across Christian, Islamic, and traditional faith traditions. Features secure consultations, a spiritual marketplace, and herbal medicine services.',
+      image: '/spiritual-consult.png',
+      link: 'https://spiritual-consult.vercel.app/',
+      tags: ['React.js', 'TypeScript', 'Marketplace'],
+      type: 'web'
+    },
+    {
+      title: 'Logiccode Academy',
+      description: 'Educational platform built with Vue.js and Tailwind CSS. Improved load times by 40% and enhanced user experience with interactive learning features.',
+      image: '/logic.jpg',
+      link: 'https://logiccode.vercel.app/',
+      tags: ['Vue.js', 'Tailwind CSS', 'Education'],
+      type: 'web'
     },
     {
       title: 'VikkyMore',
@@ -184,14 +200,6 @@ function App() {
       link: 'https://anyworkx.africa/',
       tags: ['React Native', 'Mobile', 'Services'],
       type: 'mobile'
-    },
-    {
-      title: 'Kudi9ja Pro',
-      description: 'Advanced financial technology platform dashboard with comprehensive analytics, transaction management, and reporting features.',
-      image: '/kudi9ja_logo_greywordmark_transparent.png',
-      link: 'https://kudi9ja-pro.vercel.app/dashboard',
-      tags: ['React.js', 'TypeScript', 'FinTech'],
-      type: 'web'
     },
     {
       title: 'Pennidrop',
@@ -247,6 +255,14 @@ function App() {
       image: '',
       link: 'https://movie-db-react-inky.vercel.app/',
       tags: ['React.js', 'API Integration', 'Entertainment'],
+      type: 'web'
+    },
+    {
+      title: 'BabyBloom',
+      description: 'Baby development tracking application that helps parents monitor and record their child\'s growth and developmental milestones with an intuitive and friendly interface.',
+      image: '/babybloom.png',
+      link: 'https://baby-boom-ochre.vercel.app/',
+      tags: ['React.js', 'TypeScript', 'Health'],
       type: 'web'
     }
   ]
