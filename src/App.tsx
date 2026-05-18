@@ -66,7 +66,7 @@ function App() {
       period: 'September 2025 - Present',
       type: 'contract',
       description: [
-        'Built enterprise-grade Professional Development Platform using Next.js 15, TypeScript, and Chakra UI, serving 500+ employees',
+        'Built enterprise-grade Professional Development Platform using Next.js 15, TypeScript, Angular, and Chakra UI, serving 500+ employees',
         'Integrated Microsoft Azure AD for SSO authentication, implemented advanced state management with TanStack Query reducing API calls by 60%',
         'Architected role-based access control system with three user levels and optimized performance through strategic caching and lazy loading',
         'Engineered comprehensive HR platform featuring employee management, skills assessment, career planning, and analytics reporting'
@@ -89,7 +89,7 @@ function App() {
       period: 'November 2024 - March 2025',
       type: 'contract',
       description: [
-        'Mentored, tutored, and guided over 50 women in mastering core frontend technologies, including JavaScript, ReactJS, and Next.js, HTML & CSS',
+        'Mentored, tutored, and guided over 50 women in mastering core frontend technologies, including JavaScript, Angular, ReactJS, and Next.js, HTML & CSS',
         'Mentored the top-performing student in their project submission, conducting code reviews and mentoring to enhance development practices',
         'Designed and delivered engaging and practical learning curriculum and modules tailored to frontend development'
       ]
@@ -112,7 +112,7 @@ function App() {
       period: 'January 2024 - June 2024',
       type: 'contract',
       description: [
-        'Designed and maintained Vue.js with Tailwind CSS styling web applications, reducing load times by 40%',
+        'Designed and maintained Angular with Tailwind CSS styling web applications, reducing load times by 40%',
         'Increased website page load time by 10% by implementing lazy loading and reducing unnecessary re-renders',
         'Implemented interactive learning features using responsive design principles to ensure web applications were accessible and visually appealing'
       ]
@@ -147,7 +147,7 @@ function App() {
       description: [
         'Developed the user interface for a crypto trading mobile app with over 2000 downloads',
         'Implemented Redux Toolkit for efficient state management in both web and mobile apps',
-        'Developed the web application for an agriculture investment platform, making the UI responsive and interactive using React.js, CSS, and Material UI'
+        'Developed the web application for an agriculture investment platform, making the UI responsive and interactive using React.js, Angular, CSS, and Material UI'
       ]
     }
   ]
@@ -384,7 +384,7 @@ function App() {
             </div>
 
             <p className="text-lg text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed animate-fadeIn delay-200">
-              5+ years of experience building scalable apps using React.js, Next.js, Vue.js, React Native, and TypeScript.
+              6+ years of experience building scalable apps using React.js, Next.js, Angular, Vue.js, React Native, and TypeScript.
               Passionate about enhancing UX and delivering high-quality digital products.
             </p>
 
@@ -468,7 +468,7 @@ function App() {
                   Professional Summary
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Front-End Web & Mobile Developer with 5+ years of experience building scalable applications using modern technologies like React.js, Next.js, Vue.js, React Native, and TypeScript.
+                  Front-End Web & Mobile Developer with 6+ years of experience building scalable applications using modern technologies like React.js, Next.js, Angular, Vue.js, React Native, and TypeScript.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   I've successfully improved page load speeds by 40%, optimized app performance for 5,000+ users, and mentored 50 women from learners to intern developers.
@@ -481,7 +481,7 @@ function App() {
 
             <div className="grid grid-cols-2 gap-6 animate-slideInRight">
               <div className="bg-linear-to-br from-blue-600 to-blue-700 p-6 rounded-2xl text-white text-center hover:scale-110 hover:rotate-3 transition-all duration-300 shine-effect group cursor-pointer">
-                <div className="text-4xl font-bold mb-2 group-hover:scale-125 transition-transform">5+</div>
+                <div className="text-4xl font-bold mb-2 group-hover:scale-125 transition-transform">6+</div>
                 <div className="text-blue-100">Years Experience</div>
               </div>
               <div className="bg-linear-to-br from-purple-600 to-purple-700 p-6 rounded-2xl text-white text-center hover:scale-110 hover:rotate-3 transition-all duration-300 shine-effect group cursor-pointer">
