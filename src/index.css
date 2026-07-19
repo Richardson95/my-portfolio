@@ -3,6 +3,10 @@
 /* Smooth scrolling for the whole page */
 html {
   scroll-behavior: smooth;
+  /* Scale the whole UI down: Tailwind sizing/spacing is rem-based, so this
+     shrinks text, padding and gaps proportionally. Media queries resolve rem
+     against the browser default, so breakpoints are unaffected. */
+  font-size: 87.5%;
 }
 
 /* Custom animations */
