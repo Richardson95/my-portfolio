@@ -195,7 +195,7 @@ export const more: Project[] = [
     platforms: ['mobile'],
     stack: ['React Native', 'Expo Router', 'Reanimated'],
     year: 2026,
-    tile: { icon: '/work/icon-sunday-stars.webp', bg: '#2b2470' },
+    tile: { bg: '#2b2470', screens: ['/work/sunday-stars-children.webp', '/work/sunday-stars-adults.webp'] },
     links: [],
   },
   {
