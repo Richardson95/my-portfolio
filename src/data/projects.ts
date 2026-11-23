@@ -11,7 +11,7 @@ export type Project = {
   /** Screenshot in /public/work. Leave empty to fall back to `tile`. */
   image?: string
   /** For mobile-only work: an app icon shown on a coloured tile instead of a screenshot. */
-  tile?: { icon?: string; bg: string; fg?: string }
+  tile?: { icon?: string; screens?: string[]; bg: string; fg?: string }
   links: ProjectLink[]
   /** Only featured projects get the long write-up. */
   notes?: string[]
@@ -204,7 +204,7 @@ export const more: Project[] = [
     platforms: ['mobile'],
     stack: ['Flutter', 'Dart'],
     year: 2026,
-    tile: { icon: '/work/icon-safedeal.webp', bg: '#123a8c' },
+    tile: { bg: '#123a8c', screens: ['/work/safedeal-home.webp', '/work/safedeal-deals.webp'] },
     links: [],
   },
   {
@@ -213,7 +213,7 @@ export const more: Project[] = [
     platforms: ['mobile'],
     stack: ['Flutter', 'Dart'],
     year: 2026,
-    tile: { bg: '#0f3d30', fg: '#f6f2ea' },
+    tile: { bg: '#0f3d30', screens: ['/work/deycovered-offer.webp', '/work/deycovered-sample.webp'] },
     links: [],
   },
   {

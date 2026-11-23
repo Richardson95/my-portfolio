@@ -32,7 +32,22 @@ function Preview({ project, large = false }: { project: Project; large?: boolean
       // pt-7 matches the browser bar on screenshot cards so tiles line up in the grid
       <div className="overflow-hidden rounded-xl pt-7" style={{ background: tile.bg }}>
         <div className="grid aspect-[16/10] place-items-center">
-          {tile.icon ? (
+          {tile.screens ? (
+            // phone screens rising out of the bottom of the tile
+            <div className="flex size-full items-start justify-center gap-[5%] overflow-hidden pt-2">
+              {tile.screens.map((src, n) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={`${project.name} screen ${n + 1}`}
+                  loading="lazy"
+                  className={`w-[30%] rounded-[1rem] border-[3px] border-black/80 shadow-xl transition-transform duration-500 group-hover:-translate-y-1.5 ${
+                    n % 2 ? 'mt-6' : ''
+                  }`}
+                />
+              ))}
+            </div>
+          ) : tile.icon ? (
             <img src={tile.icon} alt="" className="size-24 rounded-[1.6rem] shadow-lg" loading="lazy" />
           ) : (
             <span className="font-display text-2xl font-semibold" style={{ color: tile.fg }}>
