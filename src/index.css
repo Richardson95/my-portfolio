@@ -1,203 +1,164 @@
 @import "tailwindcss";
 
-/* Smooth scrolling for the whole page */
+/* Colours live in plain CSS variables so dark mode is just a second set of values. */
+:root {
+  --bg: #f4f2ec;
+  --surface: #fbfaf7;
+  --ink: #191713;
+  --muted: #6a655b;
+  --line: #e2ddd1;
+  --accent: #c2410c;
+  --accent-soft: #fbe6d8;
+  color-scheme: light;
+}
+
+/* Dark values apply when the system asks for dark (and the visitor hasn't picked light),
+   or when the visitor picked dark with the toggle in the header. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #12110f;
+    --surface: #1a1916;
+    --ink: #ebe7df;
+    --muted: #9b958a;
+    --line: #2b2925;
+    --accent: #f08a4b;
+    --accent-soft: #3a2316;
+    color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --bg: #12110f;
+  --surface: #1a1916;
+  --ink: #ebe7df;
+  --muted: #9b958a;
+  --line: #2b2925;
+  --accent: #f08a4b;
+  --accent-soft: #3a2316;
+  color-scheme: dark;
+}
+
+@theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "Inter", ui-sans-serif, sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
-  /* Scale the whole UI down: Tailwind sizing/spacing is rem-based, so this
-     shrinks text, padding and gaps proportionally. Media queries resolve rem
-     against the browser default, so breakpoints are unaffected. */
-  font-size: 87.5%;
+  /* The site was deliberately tightened earlier; everything is rem-based so this scales it all. */
+  font-size: 93.75%;
+  scroll-padding-top: 5rem;
 }
 
-/* Custom animations */
-@keyframes fadeIn {
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Sections fade up once when they first scroll into view (see useReveal). */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- hero motion ---------- */
+
+/* Page-load entrance; stagger with an inline animation-delay. */
+@keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(18px);
   }
 }
+.rise {
+  animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
 
-@keyframes slideInLeft {
+/* Each new phrase in the rotating headline slides up from under the line. */
+@keyframes phrase-in {
   from {
     opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0.45em);
+    filter: blur(4px);
   }
 }
+.phrase-in {
+  animation: phrase-in 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
 
-@keyframes slideInRight {
-  from {
+@keyframes caret {
+  50% {
     opacity: 0;
-    transform: translateX(50px);
   }
+}
+.caret {
+  animation: caret 1s steps(1) infinite;
+}
+
+/* Slow bob for the screenshots on the right of the hero. */
+@keyframes drift {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.drift {
+  animation: drift 7s ease-in-out infinite;
+}
+
+/* Parallax: Hero sets --mx / --my (-1..1) from the pointer; depth comes from --depth. */
+.parallax {
+  transform: translate3d(calc(var(--mx, 0) * var(--depth) * 1px), calc(var(--my, 0) * var(--depth) * 1px), 0);
+  transition: transform 0.4s ease-out;
+}
+
+@keyframes marquee {
   to {
+    transform: translateX(-50%);
+  }
+}
+.marquee {
+  animation: marquee 45s linear infinite;
+}
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
     opacity: 1;
-    transform: translateX(0);
+    transform: none;
+    transition: none;
   }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+  .rise,
+  .phrase-in,
+  .caret,
+  .drift,
+  .marquee {
+    animation: none;
   }
-  50% {
-    transform: translateY(-20px);
+  .parallax {
+    transform: none;
   }
-}
-
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes bounce-gentle {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes rotate-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease-out;
-}
-
-.animate-slideInLeft {
-  animation: slideInLeft 0.8s ease-out;
-}
-
-.animate-slideInRight {
-  animation: slideInRight 0.8s ease-out;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-bounce-gentle {
-  animation: bounce-gentle 2s ease-in-out infinite;
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 8s ease infinite;
-}
-
-/* Line clamp utility for text truncation */
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Glassmorphism effect */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Gradient text animation */
-.gradient-text-animated {
-  background: linear-gradient(90deg, #2563eb, #9333ea, #2563eb, #9333ea);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-shift 6s ease infinite;
-}
-
-/* Glowing effect */
-.glow-effect {
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3), 0 0 40px rgba(147, 51, 234, 0.2);
-}
-
-/* Floating circles background */
-.floating-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(147, 51, 234, 0.1));
-  animation: float 6s ease-in-out infinite;
-  pointer-events: none;
-}
-
-/* Staggered animation delays */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #2563eb, #9333ea);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #1d4ed8, #7e22ce);
-}
-
-/* Shine effect on hover */
-.shine-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.shine-effect::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.5s;
-}
-
-.shine-effect:hover::before {
-  left: 100%;
 }
