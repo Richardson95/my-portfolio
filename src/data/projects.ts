@@ -222,8 +222,11 @@ export const more: Project[] = [
     platforms: ['web'],
     stack: ['Angular 21', 'Signals'],
     year: 2026,
-    tile: { bg: '#0b5d3b', fg: '#e8f5ee' },
-    links: [{ label: 'Code', href: 'https://github.com/Richardson95/Cue-Sport' }],
+    image: '/work/cue-sports.webp',
+    links: [
+      { label: 'Live', href: 'https://cue-sports-omega.vercel.app/' },
+      { label: 'Code', href: 'https://github.com/Richardson95/Cue-Sport' },
+    ],
   },
   {
     name: 'Lawvee',
