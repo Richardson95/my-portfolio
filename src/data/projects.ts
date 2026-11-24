@@ -225,7 +225,6 @@ export const more: Project[] = [
     image: '/work/cue-sports.webp',
     links: [
       { label: 'Live', href: 'https://cue-sports-omega.vercel.app/' },
-      { label: 'Code', href: 'https://github.com/Richardson95/Cue-Sport' },
     ],
   },
   {
