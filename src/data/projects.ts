@@ -172,15 +172,6 @@ export const more: Project[] = [
     links: [{ label: 'Live', href: 'https://spiritual-consult.vercel.app' }],
   },
   {
-    name: 'FPA Food Ordering',
-    blurb: 'Meal ordering for staff and students of Federal Polytechnic Ayede, with no more queues at the cafeteria.',
-    platforms: ['web'],
-    stack: ['JavaScript', 'HTML', 'CSS'],
-    year: 2026,
-    image: '/work/edepoly.webp',
-    links: [{ label: 'Live', href: 'https://edepoly.vercel.app' }],
-  },
-  {
     name: 'Mini-Fashionistas',
     blurb: 'Online store for kids’ fashion and toys, ages 4 to 12.',
     platforms: ['web'],
@@ -217,13 +208,13 @@ export const more: Project[] = [
     links: [],
   },
   {
-    name: 'LearnPath',
-    blurb: 'Personalised learning for US micro-schools (grades 2–5), with student, teacher, parent and admin roles.',
+    name: 'Dezirely',
+    blurb: 'Dating app built in Flutter. I turned the designs into screens and shipped its Play Store and App Store releases.',
     platforms: ['mobile'],
     stack: ['Flutter', 'Dart'],
-    year: 2026,
-    tile: { bg: '#1f4f8f', fg: '#eef4fb' },
-    links: [{ label: 'Code', href: 'https://github.com/Richardson95/LearningPath' }],
+    year: 2022,
+    tile: { bg: '#8a1c3b', fg: '#fdeef2' },
+    links: [],
   },
   {
     name: 'Cue Sports Nigeria',
@@ -253,15 +244,6 @@ export const more: Project[] = [
     links: [{ label: 'anyworkx.africa', href: 'https://anyworkx.africa/' }],
   },
   {
-    name: 'SNAP Admin',
-    blurb: 'Operations dashboard for a delivery service: orders, riders, customers and revenue.',
-    platforms: ['web'],
-    stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    year: 2026,
-    image: '/work/snap-admin.webp',
-    links: [{ label: 'Live', href: 'https://snap-admin-five.vercel.app' }],
-  },
-  {
     name: 'Pennidrop',
     blurb: 'Finance dashboard with transactions, client records, projection reports and an “Ask Penni” assistant.',
     platforms: ['web'],
@@ -271,15 +253,6 @@ export const more: Project[] = [
     links: [{ label: 'Live', href: 'https://pennidrop-beryl.vercel.app' }],
   },
   {
-    name: 'LogicCode Academy',
-    blurb: 'Site for a tech academy: courses, free classes and the affiliate programme.',
-    platforms: ['web'],
-    stack: ['Vue', 'Tailwind CSS'],
-    year: 2024,
-    image: '/work/logiccode.webp',
-    links: [{ label: 'Live', href: 'https://logiccode.vercel.app/' }],
-  },
-  {
     name: 'VikkyMore',
     blurb: 'Multi-business platform behind a crypto trading app and an agriculture investment product.',
     platforms: ['web', 'mobile'],
@@ -287,15 +260,6 @@ export const more: Project[] = [
     year: 2021,
     image: '/work/vikkymore.webp',
     links: [{ label: 'vikkymore.com', href: 'https://www.vikkymore.com/home' }],
-  },
-  {
-    name: 'BabyBloom',
-    blurb: 'Track a baby’s growth and milestones from birth to two years.',
-    platforms: ['web'],
-    stack: ['React', 'TypeScript'],
-    year: 2025,
-    image: '/work/babybloom.webp',
-    links: [{ label: 'Live', href: 'https://baby-boom-ochre.vercel.app/' }],
   },
   {
     name: 'Arena',
@@ -333,12 +297,4 @@ export const internal: { org: string; items: { name: string; what: string }[] }[
 ]
 
 // Older and smaller things, kept because people still ask about them.
-export const archive: ProjectLink[] = [
-  { label: 'Dezirely (Flutter, Play Store)', href: 'https://play.google.com/store/apps/details?id=com.nayric.dezirely.dezirely&hl=en' },
-  { label: 'Movie database', href: 'https://movie-db-react-inky.vercel.app/' },
-  { label: 'Wardrobe manager', href: 'https://wardrobe-manager-vue-js.vercel.app/' },
-  { label: 'Wristwatch store', href: 'https://wristwatch-typescrpt-project.vercel.app/' },
-  { label: 'Realtime chat', href: 'https://chat-rel.vercel.app/' },
-  { label: 'Fashion Street', href: 'https://fashion-street-teal.vercel.app' },
-  { label: 'E-commerce filters', href: 'https://e-commerce-filtering-react-project.vercel.app' },
-]
+export const archive: ProjectLink[] = []

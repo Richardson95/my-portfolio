@@ -167,17 +167,19 @@ function MoreProjects() {
         ))}
       </div>
 
-      <div className="mt-16 border-t border-line pt-6 text-sm">
-        <span className="text-muted">Older and smaller: </span>
-        {archive.map((a, i) => (
-          <span key={a.href}>
-            <a href={a.href} target="_blank" rel="noreferrer" className="underline decoration-line underline-offset-4 hover:decoration-accent">
-              {a.label}
-            </a>
-            {i < archive.length - 1 && <span className="text-muted">, </span>}
-          </span>
-        ))}
-      </div>
+      {archive.length > 0 && (
+        <div className="mt-16 border-t border-line pt-6 text-sm">
+          <span className="text-muted">Older and smaller: </span>
+          {archive.map((a, i) => (
+            <span key={a.href}>
+              <a href={a.href} target="_blank" rel="noreferrer" className="underline decoration-line underline-offset-4 hover:decoration-accent">
+                {a.label}
+              </a>
+              {i < archive.length - 1 && <span className="text-muted">, </span>}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
